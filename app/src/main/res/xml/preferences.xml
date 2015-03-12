@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="key1"
+            android:summary="Ascending"
+            android:title="TasksOrder" >
+        </CheckBoxPreference>
+        <ListPreference
+            android:entries="@array/alarmLabels"
+            android:entryValues="@array/alarmValues"
+            android:key="key2"
+            android:summary="Set an Alarm"
+            android:title="Alarm" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About" >
+        <PreferenceScreen
+            android:key="privacyPolicy"
+            android:title="Privacy Policy" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.lingoware.lingow.sesion8.ActivityPrivacyPolicy"
+                android:targetPackage="com.lingoware.lingow.sesion8"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="eula"
+            android:title="Device Specific EULA" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.lingoware.lingow.sesion8.ActivityEULA"
+                android:targetPackage="com.lingoware.lingow.sesion8"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>
